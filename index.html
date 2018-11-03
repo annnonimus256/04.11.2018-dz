@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="index.js"></script>
+</head>
+<body>
+
+        <!-- 1.Создать страницу с одним внутренним скриптом и одним внешним.
+        Перед началом кода, который будет в отдельном файле, написать осмысленный комментарий.
+        Отформатировать следующий код. В коде допущена одна ошибка. Не хватает символа точка с запятой(;). Устраните ошибку. -->
+        <script>
+        (function(win)
+        {
+            var params = 
+            {
+                states:
+                {
+                    url:" / ",
+                    template: "temlate.js"
+                }
+            }
+            function setStates(params)
+            {
+                if(win && !win.params)
+                {
+                    win.params = params;
+                }
+            }
+            setStates();
+            console.log(params.states.template);
+        })(window);
+</script>
+
+    <!-- 2.Создайте 3 переменные, сначала присвойте им трем одно и то же значение, 
+    выведите в консоль.
+    Затем установите для каждой переменной разное значение и снова 
+    выведите в консоль. -->
+    <script>
+        var x, y, z, a;
+        x=y=z=1;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        x = 5;
+        y = 7;
+        z = 9;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        </script>
+
+
+
+
+    <!-- 3.Объявите переменную, но не присваивайте ей значение.
+    Выведите ее в консоль чтоб убедиться что она undefined.
+    Затем поочередно присваивайте ей разные значения и выводите в консоль.
+    Булевое значение -> в консоль, число -> в консоль, 
+    string -> в консоль, null -> в консоль.
+    И в конце проверьте переменную с null с помощью оператора typeof. -->
+    <script>
+        var a;
+        console.log(a);
+        a = true;
+        console.log(a);
+        a = 5;
+        console.log(a);
+        a = "qwe" ;
+        console.log(a);
+        a = null;              
+        console.log(a);
+        console.log(typeof(a));
+        </script>
+
+
+
+
+        <!-- 4.Создайте переменную с помощью let и установите в нее 
+        значение «JavaScript»
+        Создайте обычную переменную с помощью var установите 
+        в нее значение «courses»
+        Склейте две эти строки таким образом чтоб между ними 
+        был пробел и результат склеивания запишите в переменную result
+        Выведите переменную result в консоль. -->
+
+        <script>
+        let b="JavaScript";
+        var w="courses";
+        result = b + " " + w;
+        console.log(result);
+        </script>
+
+
+
+
+        <!-- 5.Создайте переменную, с помощью инкремента увеличьте ее на 3
+        Затем присвойте значение вашей переменной одновременно 
+        переменной «z» и «x».
+        Выражение должно быть в одну строку. -->
+        <script>
+            var q = 0;
+            q = q+3;
+            z = q;
+            x = q;
+            console.log(q, z, x);        
+        </script>
+               
+        
+
+
+        <!-- 6. Задача. Выведите столбец чисел от 1 до 50. -->
+        <p id="object6"></p>
+        <script>
+        var  i, a=" ";
+        for(i=1; i<=50; i++) {
+        a += i + "<br>";
+        document.getElementById("object6").innerHTML=a;
+        }
+      
+        </script>
+        <br><br><br><br><br><br><br>
+
+
+        
+        <!-- 7.Дан массив с элементами [1, 2, 3, 4, 5]. 
+        С помощью цикла for выведите все эти элементы на экран. -->
+        <p id="object7"></p>
+        <script>
+        var obj7 = "", a = [1, 2, 3, 4, 5];
+        for(i = 0; i < a.length; i++) {
+            obj7 += a[i] + "<br>";
+            document.getElementById("object7").innerHTML=obj7;
+        }
+        </script>
+        <br><br><br><br><br><br><br>
+
+
+
+        <!-- 8.Дан массив с элементами [2, 3, 4, 5]. 
+        С помощью цикла for найдите произведение элементов этого массива. -->
+        
+        <p id="object8"></p>
+        <script>
+        var obj8 = 1, a = [2, 3, 4, 5];
+        for(i = 0; i < a.length; i++) {
+            obj8 *= a[i];
+            document.getElementById("object8").innerHTML=obj8;
+        }
+        </script>
+        <br><br><br><br><br><br><br>
+
+
+        <!-- 9.Выведите столбец четных чисел в промежутке от 0 до 100 -->
+        <p id="object9"></p>
+        <script>
+        var i, obj9="";
+            for(i = 0; i <= 100; i++){
+
+                    if(i % 2 === 0){
+                        obj9+=i + "<br>";
+                        document.getElementById("object9").innerHTML=obj9;
+                    }
+                }
+        </script>
+        <br><br><br><br><br><br><br>
+
+
+
+        <!-- 10. Дан массив с элементами 2, 5, 9, 15, 0, 4. 
+        С помощью цикла for и оператора if выведите на экран столбец 
+        тех элементов массива, которые больше 3-х, но меньше 10. -->
+        <p id="object10"></p>
+        <script>
+        var mas10=[2, 5, 9, 15, 0, 4];
+        var obj10="", i;
+            for(i = 0; i < mas10.length; i++)
+            {
+                if(mas10[i]<10 && mas10[i]>3){
+                obj10 += mas10[i] + "<br>";
+                document.getElementById("object10").innerHTML=obj10;
+                }
+            }
+        </script>
+        <br><br><br><br><br><br><br>
+
+
+
+        <!-- 11. Дано число n=1000. Делите его на 2 столько раз, 
+        пока результат деления не станет меньше 50. 
+        Какое число получится? 
+        Посчитайте количество итераций, необходимых для этого 
+        (итерация - это проход цикла), и запишите его в переменную num. -->
+        <p id="object11.1"></p>
+        <p id="object11.2"></p>
+
+        <script>
+        var n=1000, int=0;
+        while(n>50){
+            var obj11 = n / 2;
+            var n = obj11;
+            int++;
+        }
+        document.getElementById("object11.1").innerHTML=n;
+        document.getElementById("object11.2").innerHTML=int;
+        </script>
+</body>
+</html>
